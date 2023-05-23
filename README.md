@@ -1,13 +1,34 @@
-# Sample Hardhat Project
+# Contract repo for the ENF POAP Service
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+This project contains the smart contracts that are used by the ENF POAP Service. There is an example hello world smart contracts with a simple test and deploy script. These can be used as examples for future work.
 
-Try running some of the following tasks:
+Some useful commands you will need for smart contract development.
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
+To compile your smart contracts:
+
 ```
+npx hardhat compile
+```
+
+To run all the tests:
+```
+npx hardhat test
+```
+
+To run a specific test (example HelloWorld test): 
+```
+npx hardhat test test/HelloWorld.ts
+```
+To deploy a contracts:
+
+  deploying to testnet
+```
+npx hardhat run --network eosevm_testnet scripts/00_Deploy_HelloWorld.ts
+```
+  deploying to mainnet
+```
+npx hardhat run --network eosevm scripts/00_Deploy_HelloWorld.ts
+```
+
+Verify contract: TBD
+
